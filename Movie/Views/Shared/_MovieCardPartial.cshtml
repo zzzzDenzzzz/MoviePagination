@@ -1,0 +1,20 @@
+﻿@model Cinema
+
+<div class="card"> 
+   
+    <div class="img-container">
+        <div class="img-blur" style="background-image:url(@Model.Poster)"></div>
+         <img src="@Model.Poster" onerror="event.target.src='/images/placeholder.png'" class="card-img-top" alt="...">  
+    </div>
+    
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title (@Model.Year)</h5>
+        <p class="card-text">Janre : @Model.Type</p>
+
+        @if (Model.Plot==null)
+        {
+            <a movie="@Model"></a>
+        } 
+
+    </div>
+</div>
